@@ -6,7 +6,6 @@ self.addEventListener('install',(event) =>{
         caches.open("static-cache")
         .then((cache)=>{
             return cache.addAll([
-                'css/style.css',
                 'css/bootstrap.min.css',
                 'css/bootstrap.min.css.map',
                 'js/bootstrap.bundle.min.js',
