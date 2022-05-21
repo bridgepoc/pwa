@@ -7,6 +7,17 @@
 <body>
     <p>This's PWA Demo. </p>
     <ul id="list"></ul>
-    <b>test</b>
+    <form>
+    <input type="text" name="username" title="username"> <br>
+    <input type="password" name="password" title="password" ><br>
+    <button value="submit" />
+</form>
+    <script>
+        if('serviceWorker' in navigator){
+            navigator.serviceWorker.register('js/sw.js')
+            .then(reg =>console.log('reg sw',reg))
+            .catch(err => console.log('erro',err));
+        }
+    </script>
 </body>
 </html>
