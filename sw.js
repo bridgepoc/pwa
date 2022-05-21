@@ -4,8 +4,6 @@ self.addEventListener('install',(event) =>{
         caches.open("static-cache")
         .then((cache)=>{
             return cache.addAll([
-                'css/bootstrap.min.css',
-                'js/bootstrap.bundle.min.js',
                 'images/icon512.png',
             ]);
         })
