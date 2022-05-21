@@ -1,5 +1,3 @@
-//const { response } = require("express");
-
 self.addEventListener('install',(event) =>{
     console.log('installing');
     event.waitUntil(
@@ -7,9 +5,7 @@ self.addEventListener('install',(event) =>{
         .then((cache)=>{
             return cache.addAll([
                 'css/bootstrap.min.css',
-                'css/bootstrap.min.css.map',
                 'js/bootstrap.bundle.min.js',
-                'js/bootstrap.bundle.min.js.map',
                 'images/icon512.png',
             ]);
         })
