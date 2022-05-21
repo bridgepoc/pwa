@@ -1,23 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <title>PWA Demo</title>
+  <title>Express</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="manifest" href="manifest.json" />
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script>
+    if('serviceWorker' in navigator){
+      navigator.serviceWorker.register('sw.js')
+      .then((reg) =>{
+        console.log('finish ServiceWork',reg);
+      })
+      .catch((err) =>{
+        console.log('err' + err);
+      })
+    }
+  </script>
 </head>
+
 <body>
-    <p>This's PWA Demo. </p>
-    <ul id="list"></ul>
-    <form>
-    <input type="text" name="username" title="username"> <br>
-    <input type="password" name="password" title="password" ><br>
-    <button value="submit" />
-</form>
-    <script>
-        if('serviceWorker' in navigator){
-            navigator.serviceWorker.register('js/sw.js')
-            .then(reg =>console.log('reg sw',reg))
-            .catch(err => console.log('erro',err));
-        }
-    </script>
+  
+  <div class="container">
+    <p>Transport Booking App</p>
+      <form>
+        <div class="form-group">
+          <label for="usr">Name:</label>
+          <input type="text" class="form-control" id="usr">
+        </div>
+        <div class="form-group">
+          <label for="pwd">Password:</label>
+          <input type="password" class="form-control" id="pwd">
+        </div>
+        <p></p>
+          <button type="button" class="btn btn-primary">Login</button>
+        
+      </form>
+  </div>
 </body>
+
 </html>
