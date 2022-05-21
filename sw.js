@@ -4,7 +4,11 @@ self.addEventListener('install',(event) =>{
         caches.open("static-cache")
         .then((cache)=>{
             return cache.addAll([
-                'images/icon512.png',
+                '/css/bootstrap.min.css',
+                '/css/bootstrap.min.css.map',
+                '/js/bootstrap.bundle.min.js',
+                '/js/bootstrap.bundle.min.js.map',
+                '/images/icon512.png',
             ]);
         })
     );
